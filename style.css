@@ -1,0 +1,127 @@
+/* // GENERAL SETTINGS // */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Karla, sans-serif;
+}
+/* // BODY STYLE -- MOBILE APPROACH // */
+body{
+    background-color: hsl(204, 43%, 93%);
+    font-size: 1em;
+    min-height: 100vh;
+    display: flex; 
+    align-items: center;
+}
+/* /// MAIN STYLE /// */
+main{
+    margin: auto;
+    max-width: 280px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+/* //// SECTIONS STYLE //// */
+.sections{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 1.4rem 1.2rem;
+}
+.sections__heading1{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.sections p{
+    font-size: 0.7em;
+}
+.sections button{
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    border-radius: 5px;
+    color: hsla(0, 0%, 100%, 0.8);
+    font-weight: 600;
+    padding: 0.7rem;
+    box-shadow: 0 1px 7px hsla(0, 0%, 0%, 0.3);
+}
+/* ///// SECTION 01 STYLE ///// */
+#section1{
+    background-color: hsla(0, 0%, 100%, 0.95);
+    border-radius: 5px 5px 0 0;
+}
+#section1 h1{
+    color: hsl(179, 62%, 43%);
+    grid-area: com;
+}
+#section1 h2{
+    font-size: 0.75em;
+    color: hsl(71, 73%, 54%);
+    font-weight: 600
+}
+#section1 p{
+    color: hsla(0, 0%, 50%, 0.8);
+    line-height: 2;
+}
+/* ///// SECTION 02 STYLE ///// */
+#section2{
+    background-color: hsl(179, 54%, 48%);
+    color: hsla(0, 0%, 100%, 0.9);
+}
+#section2__p--alpha{
+    color: hsla(0, 0%, 100%, 0.5);
+    margin-bottom: -1em;
+    font-size: 0.75em;
+}
+#section2__p--color{
+    color: hsla(0, 0%, 100%, 0.85);
+    font-size: 0.8em;
+}
+#section2 span{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: hsla(0, 0%, 100%, 0.9);
+    margin-right: 8px;
+}
+/* ///// SECTION 03 STYLE ///// */
+#section3{
+    background-color: hsl(176, 50%, 55%);
+    color: hsla(0, 0%, 100%, 0.85);
+    border-radius: 0 0 5px 5px;
+}
+#section3 p{
+    color: hsla(0, 0%, 100%, 0.7);
+    font-weight: thin;
+    line-height: 1.5;
+    font-size: 0.7em; 
+    margin-top: -0.5rem; 
+}
+/* // FOOTER // */
+footer{
+    display: none;
+}
+/* // MEDIA QUERIES STYLES FOR LARGES SCREENS // */
+@media only screen and (width >= 768px ) {
+    main{
+        display: grid;
+        justify-content: center;
+        max-width: 600px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'com com'
+                             'subs wus';
+    }
+    .sections{
+        padding: 1.8rem;
+    }
+    #section1{
+        grid-area: com;
+    }
+    #section2{
+        grid-area: subs;
+        border-radius: 0 0 0 5px;
+    }
+    #section3{
+        grid-area: wus;
+        border-radius: 0 0 5px 0;
+    }
+    
+}
